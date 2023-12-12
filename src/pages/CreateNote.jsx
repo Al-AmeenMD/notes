@@ -2,8 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { FaSave } from "react-icons/fa";
 import { useState } from 'react';
-import { v4 as uuid } from 'uuid';
-
+import { v4 as uuidv4 } from 'uuid';
 import useCreateDate from "../components/useCreateDate";
 
 const CreateNote = ({setNotes}) => {
@@ -16,7 +15,7 @@ const CreateNote = ({setNotes}) => {
     e.preventDefault();
 
     if(title && details){
-      const note = {id: uuid(), title, details, date}
+      const note = {id: uuidv4(), title, details, date}
       // add this note to the notes array
       setNotes(prevNotes => [note, ...prevNotes])
      
