@@ -18,8 +18,6 @@ const CreateNote = ({setNotes}) => {
       const note = {id: uuidv4(), title, details, date}
       // add this note to the notes array
       setNotes(prevNotes => [note, ...prevNotes])
-     
-      // console.log(note);
 
       // redirect to home page
       navigate('/')
